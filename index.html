@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+    <title>NIKE | Air Zoom</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <script src="scripts.js" defer></script>
+</head>
+
+<body>
+
+    <header class="cabecalho">
+        <img src="img/logo.png" class="logo" alt="Logo Nike">
+
+        <button class="abrir-carrinho" id="abrirCarrinho">
+            🛒 Carrinho
+            <span id="contadorCarrinho">0</span>
+        </button>
+    </header>
+
+    <main class="caixa-principal">
+
+        <section class="caixa-texto">
+            <span class="categoria">NIKE RUNNING</span>
+
+            <h4 id="preco">R$ 799,00</h4>
+            <h1>Nike Air Zoom</h1>
+
+            <p>
+                O Nike Air Zoom combina velocidade, conforto e inovação
+                para quem busca máximo desempenho. Com amortecimento
+                responsivo e tecnologia Zoom Air, oferece impulso extra
+                a cada passo. Seu design leve e moderno garante
+                estabilidade e suporte para corridas e treinos intensos.
+            </p>
+
+            <label for="tamanho">Escolha seu tamanho:</label>
+
+            <select id="tamanho">
+                <option value="">Selecione um tamanho</option>
+                <option value="37">37</option>
+                <option value="38">38</option>
+                <option value="39">39</option>
+                <option value="40">40</option>
+                <option value="41">41</option>
+                <option value="42">42</option>
+                <option value="43">43</option>
+                <option value="44">44</option>
+            </select>
+
+            <button class="botao-carrinho" id="adicionarCarrinho">
+                Adicionar ao carrinho
+            </button>
+
+            <p id="mensagem" role="status" aria-live="polite"></p>
+        </section>
+
+        <section class="caixa-imagem">
+            <img src="img/nike1.png" class="tenis" id="imagemTenis"
+                alt="Tênis Nike Air Zoom verde">
+        </section>
+
+    </main>
+
+    <div class="caixa-botoes">
+        <button class="botoes verde ativo"
+            data-cor="#ccee66"
+            data-imagem="img/nike1.png"
+            data-nome="Verde"
+            aria-label="Selecionar tênis verde">
+        </button>
+
+        <button class="botoes rosa"
+            data-cor="#ff9eb5"
+            data-imagem="img/nike3.png"
+            data-nome="Rosa"
+            aria-label="Selecionar tênis rosa">
+        </button>
+
+        <button class="botoes azul"
+            data-cor="#58cced"
+            data-imagem="img/nike2.png"
+            data-nome="Azul"
+            aria-label="Selecionar tênis azul">
+        </button>
+    </div>
+
+    <!-- Fundo escuro do carrinho -->
+    <div class="fundo-carrinho" id="fundoCarrinho"></div>
+
+    <!-- Painel lateral do carrinho -->
+    <aside class="painel-carrinho" id="painelCarrinho"
+        aria-label="Carrinho de compras"
+        aria-hidden="true">
+
+        <div class="topo-carrinho">
+            <h2>Meu carrinho</h2>
+            <button id="fecharCarrinho" aria-label="Fechar carrinho">
+                ✕
+            </button>
+        </div>
+
+        <div id="itensCarrinho" class="itens-carrinho"></div>
+
+        <div class="resumo-carrinho">
+            <p>Subtotal: <strong id="subtotal">R$ 0,00</strong></p>
+            <p>Frete: <strong>A calcular</strong></p>
+            <h3>Total: <span id="total">R$ 0,00</span></h3>
+
+            <button id="finalizarCompra" class="botao-finalizar">
+                Continuar compra
+            </button>
+        </div>
+
+    </aside>
+
+</body>
+</html>
